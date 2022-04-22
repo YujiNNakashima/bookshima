@@ -6,6 +6,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import { CacheProvider } from '@emotion/react';
 import theme from '../src/theme';
 import createEmotionCache from '../src/createEmotionCache';
+import Link from 'next/link'
 
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
@@ -13,7 +14,6 @@ import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import List from '@mui/material/List';
 import Typography from '@mui/material/Typography';
-import Divider from '@mui/material/Divider';
 import ListItem from '@mui/material/ListItem';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
@@ -41,7 +41,7 @@ export default function MyApp(props) {
       <AppBar position="fixed" sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}>
         <Toolbar>
           <Typography variant="h6" noWrap component="div">
-            Clipped drawer
+            BOOKSHIMA APP
           </Typography>
         </Toolbar>
       </AppBar>
@@ -56,18 +56,22 @@ export default function MyApp(props) {
         <Toolbar />
         <Box sx={{ overflow: 'auto' }}>
           <List>
+            <Link href="/viewbooks">
               <ListItem button key="Livros">
                 <ListItemIcon>
                 <MenuBookIcon></MenuBookIcon>
                 </ListItemIcon>
                 <ListItemText primary="Livros" />
               </ListItem>
+            </Link>
+            <Link href="/add-book">
               <ListItem button key="Cadastro de livros">
                 <ListItemIcon>
                 <ModeEditOutlineIcon></ModeEditOutlineIcon>
                 </ListItemIcon>
                 <ListItemText primary="Cadastro de livros" />
               </ListItem>
+            </Link>  
           </List>
         </Box>
       </Drawer>
