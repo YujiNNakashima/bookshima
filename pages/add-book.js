@@ -14,11 +14,11 @@ export default function About() {
         <Typography variant="h4" component="h1" gutterBottom>
           add book
         </Typography>
-        <Button variant="contained" component={Link} noLinkStyle href="/">
+        {/* <Button variant="contained" component={Link} noLinkStyle href="/">
           Go to the main page
         </Button>
         <ProTip />
-        <Copyright />
+        <Copyright /> */}
       </Box>
     </Container>
   );
